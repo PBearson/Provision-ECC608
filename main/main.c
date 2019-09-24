@@ -84,7 +84,13 @@ void print_csr(char* csr, size_t csr_size)
 void print_pubkey(uint8_t* pubkey, size_t pubkey_size)
 {
 	printf("Your public key:\n");
-	for(int i = 0; i < pubkey_size; i++) printf("%X ", pubkey[i]);
+	printf("04:");
+	for(int i = 0; i < pubkey_size; i++)
+	{
+		if((i + 1) % 15 == 0 && i != 0) printf("\n");
+		if(i < pubkey_size - 1) printf("%02x:", pubkey[i]);
+		else printf("%02x", pubkey[i]);
+	}
 	printf("\n\n");
 }
 
@@ -121,6 +127,6 @@ void app_main()
 	ATCAIfaceCfg cfg = atca_cfg_init();	
 	i2c_init();
 	check_ret(atcab_init(&cfg));
-	printf("Your cryptochip is successfully connected!\n");
+	printf("Your cryptochip is successfully connected!\n\n");
 	run();
 }
