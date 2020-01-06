@@ -1,2 +1,5 @@
 build
 sdkconfig*
+secure_build.sh
+secure_build_help.txt
+keys
