@@ -1,5 +1,7 @@
 # Provision ECCx08
 
+### Author: Bryan Pearson
+
 Download or clone this repository into your ESP-IDF workspace in order to quickly provision the ECCx08 cryptochip for your needs. 
 
 To get started, you will need to edit the "main/crypto_settings.h" file to reflect your configuration. For example, if you are using the ATECC508A chip, you need to change ECCX08_TYPE to "508". You will also likely need to change the SDA and SCL pins, which are currently configured for the HelTec WiFi Kit 32 board.
