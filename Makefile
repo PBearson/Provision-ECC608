@@ -3,6 +3,6 @@
 # project subdirectory.
 #
 
-PROJECT_NAME := eccx08-template
+PROJECT_NAME := provision-eccx08
 
 include $(IDF_PATH)/make/project.mk
