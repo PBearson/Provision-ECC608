@@ -7,10 +7,16 @@ The project assumes you have connected your ESP32-WROOM-32 to an ECC608 through 
 ## Get Started
 
 - Installation instructions for ESP-IDF version release/v4.2 are here: https://docs.espressif.com/projects/esp-idf/en/release-v4.2/esp32/get-started/index.html
-- Download this project using the following command:
+- Download and configure this project using the following commands:
 ```
 git clone --recursive https://github.com/PBearson/Provision-ECC608.git
+cd Provision-ECC608
+idf.py menuconfig
 ```
+- In the menu config, navigate to **Component config -> esp-cryptoauthlib** and change the I2C SDA pins and I2C SCL pins to the appropriate pinout for your setup.
+- If the I2C slave address is not 0xC0, or if you do not know the address, the check the option "Scan for the ATECC608A I2C address".
+
+
 
 To get started, you will need to edit the "main/crypto_settings.h" file to reflect your configuration. For example, if you are using the ATECC508A chip, you need to change ECCX08_TYPE to "508". You will also likely need to change the SDA and SCL pins, which are currently configured for the HelTec WiFi Kit 32 board.
 
