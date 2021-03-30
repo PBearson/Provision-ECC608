@@ -1,6 +1,0 @@
-esp_cryptoauth_utility/signer*
-*.pyc
-esp_cryptoauth_utility/output_files/device_cert.pem
-*.crt
-*.csr
-*.key
