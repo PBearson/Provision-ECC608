@@ -23,3 +23,7 @@ idf.py build flash monitor
 ```
 
 A public key and CSR will print to the console. You may save the CSR for future use in a network application (e.g., AWS IoT).
+
+## Sample Output
+
+![Sample output](provision-ecc608-sample.JPG)
