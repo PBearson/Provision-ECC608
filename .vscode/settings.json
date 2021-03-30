@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "atcacert_host_hw.h": "c",
+        "stdio.h": "c",
+        "cryptoauthlib.h": "c"
+    }
+}
