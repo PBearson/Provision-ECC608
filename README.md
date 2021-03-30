@@ -6,6 +6,8 @@ The project assumes you have connected your ESP32-WROOM-32 to an ECC608 through 
 
 ## Get Started
 
+Follow these instructions to quickly generate a private key and CSR:
+
 - Installation instructions for ESP-IDF version release/v4.2 are here: https://docs.espressif.com/projects/esp-idf/en/release-v4.2/esp32/get-started/index.html
 - Download and configure this project using the following commands:
 ```
@@ -14,12 +16,10 @@ cd Provision-ECC608
 idf.py menuconfig
 ```
 - In the menu config, navigate to **Component config -> esp-cryptoauthlib** and change the I2C SDA pins and I2C SCL pins to the appropriate pinout for your setup.
-- If the I2C slave address is not 0xC0, or if you do not know the address, the check the option "Scan for the ATECC608A I2C address".
+- If the I2C slave address is not 0xC0, or if you do not know the address, then check the option "Scan for the ATECC608A I2C address".
+- Now quit the menuconfig and build/flash the app to your ESP32:
+```
+idf.py build flash monitor
+```
 
-
-
-To get started, you will need to edit the "main/crypto_settings.h" file to reflect your configuration. For example, if you are using the ATECC508A chip, you need to change ECCX08_TYPE to "508". You will also likely need to change the SDA and SCL pins, which are currently configured for the HelTec WiFi Kit 32 board.
-
-
-
-currently written to generate a private ECC key in slot 0 of the cryptochip, then return a CSR which can be used to generate a valid certificate for the host device (e.g., your ESP32). This can be used in applications such as TLS client-side authentication, where the ECCx08 provides a hardware root of trust.
+A public key and CSR will print to the console. You may save the CSR for future use in a network application (e.g., AWS IoT).
