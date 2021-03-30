@@ -1,3 +1,0 @@
-[submodule "components/components/esp-cryptoauthlib"]
-	path = components/components/esp-cryptoauthlib
-	url = git@github.com:PBearson/esp-cryptoauthlib.git
