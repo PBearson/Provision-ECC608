@@ -1,16 +1,6 @@
-/* Hello World Example
-
-   This example code is in the Public Domain (or CC0 licensed, at your option.)
-
-   Unless required by applicable law or agreed to in writing, this
-   software is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
-   CONDITIONS OF ANY KIND, either express or implied.
-*/
 #include <stdio.h>
 #include "cryptoauthlib.h"
 #include "atcacert/atcacert_client.h"
-// #include "atcacert/atcacert_host_hw.h"
-// #include "driver/i2c.h"
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
 #include "csr_def.h"
