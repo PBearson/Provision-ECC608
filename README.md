@@ -9,7 +9,7 @@ The project assumes you have connected your ESP32-WROOM-32 to an ECC608 through 
 Download this project using the following command:
 
 ```
-git clone https://github.com/PBearson/Provision-ECC608.git
+git clone --recursive https://github.com/PBearson/Provision-ECC608.git
 ```
 
 N
