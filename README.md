@@ -29,4 +29,4 @@ A public key and CSR will print to the console. Note: the private key is stored 
 
 Note: You have to run the firmware/app to see the output. You MUST save the CSR into a file, e.g. ecc608a.csr.
 
-![Sample output](./imgs/provision-ecc608-sample.JPG)
+![Sample output](./imgs/provision-ecc608-sample.jpg)
