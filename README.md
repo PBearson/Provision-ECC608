@@ -15,7 +15,7 @@ git clone --recursive https://github.com/PBearson/Provision-ECC608.git
 cd Provision-ECC608
 idf.py menuconfig
 ```
-- The idf.py commaned is not needed if our IoT kit is used.
+- The idf.py command is not needed if our IoT kit is used.
 - In the menu config, navigate to **Component config -> esp-cryptoauthlib** and change the I2C SDA pins and I2C SCL pins to the appropriate pinout for your setup. Not needed if our IoT kit is used.
 - If the I2C slave address is not 0xC0, or if you do not know the address, then check the option "Scan for the ATECC608A I2C address". Not needed if our IoT kit is used.
 - Now quit the menuconfig and build/flash the app to your ESP32. VS Code can be used to do the same thing, i.e. flashing the binary app/firmware into the ESP32, running it and monitoring the serial port output.
