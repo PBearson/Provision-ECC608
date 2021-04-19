@@ -2,7 +2,7 @@
 
 This example project is used to generate a private key and certificate sign request (CSR) using the [ATECC608A](https://www.microchip.com/wwwproducts/en/atecc608a) (TrustCustom) crypto chip. You will need to compile the example code, flash the generated firmware (binary) into the ESP32, which is connected to the ATECC608A chip through I2C, and run the firmware. The firmware will provision the ATECC608A chip, creating the public and privacy key pair. The private key will be stored inside of the ATECC608A and never go out of the ATECC608A. The firmware reads the public key and outputs it to the serial port. You HAVE to save the output CSR into a file.
 
-The project assumes you have connected your ESP32-WROOM-32 to an ECC608 through a I2C connection. The I2C address, SDA, and SCL pins are 0xC0, 27, and 33 respectively, but these are easily configurable. This is our IoT kit configuration. You do not need to change the I2C configuraiton if our IoT kit is used.
+The project assumes you have connected your ESP32-WROOM-32 to an ECC608 through an I2C connection. The I2C address, SDA, and SCL pins are 0xC0, 27, and 33 respectively, but these are easily configurable. This is our IoT kit configuration. You do not need to change the I2C configuraiton if our IoT kit is used.
 
 ## Get Started
 
