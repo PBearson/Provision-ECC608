@@ -1,6 +1,6 @@
 # Provision ECC608
 
-This project can be used to generate a private key and certificate sign request (CSR) using the ATECC608A (TrustCustom) crypto chip. More information about the chip can be found here: https://www.microchip.com/wwwproducts/en/atecc608a
+This project is used to generate a private key and certificate sign request (CSR) using the [ATECC608A](https://www.microchip.com/wwwproducts/en/atecc608a) (TrustCustom) crypto chip. 
 
 The project assumes you have connected your ESP32-WROOM-32 to an ECC608 through a I2C connection. The I2C address, SDA, and SCL pins are 0xC0, 27, and 33 respectively, but these are easily configurable.
 
