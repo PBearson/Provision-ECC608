@@ -23,7 +23,7 @@ idf.py menuconfig
 idf.py build flash monitor
 ```
 
-A public key and CSR will print to the console. Note: the private key is stored inside of ATECC608A chip and never comes out. You may save the CSR for future use in a network application (e.g., AWS IoT).
+A public key and CSR will print to the console. Note: the private key is stored inside of the ATECC608A chip and never comes out. You may save the CSR for future use in a network application (e.g., AWS IoT).
 
 ## Sample Output
 
