@@ -4,6 +4,10 @@ This example project is used to generate a private key and certificate sign requ
 
 The project assumes you have connected your ESP32-WROOM-32 to an ECC608 through an I2C connection. The I2C address, SDA, and SCL pins are 0xC0, 27, and 33 respectively, but these are easily configurable. This is our IoT kit configuration. You do not need to change the I2C configuraiton if our IoT kit is used.
 
+**Notes**:
+* ATECC608A is configured to be provisioned multiple times in this project.
+* ATECC608A is configured to be provisioned one time in practice for the sake of security.
+
 ## Get Started
 
 Follow these instructions to generate a private key and CSR:
