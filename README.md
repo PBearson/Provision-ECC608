@@ -6,7 +6,7 @@ The project assumes you have connected your ESP32-WROOM-32 to an ECC608 through 
 
 **Notes**:
 * ATECC608A is configured to be provisioned multiple times in this project.
-* ATECC608A is configured to be provisioned one time in practice for the sake of security.
+* ATECC608A can be configured to be provisioned one time in practice for the sake of security.
 
 ## Get Started
 
