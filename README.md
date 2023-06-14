@@ -12,16 +12,16 @@ The project assumes you have connected your ESP32-WROOM-32 to an ECC608 through 
 
 Follow these instructions to generate a private key and CSR:
 
-- Installation instructions for ESP-IDF version release/v4.2 are here: https://docs.espressif.com/projects/esp-idf/en/release-v4.2/esp32/get-started/index.html. Not needed if the provided VM is used.
+- Installation instructions for ESP-IDF version release/v5.1 are here: https://docs.espressif.com/projects/esp-idf/en/release-v5.1/esp32/get-started/index.html. This is not needed if the provided VM is used.
 - Download and configure this project using the following commands:
-```
-git clone --recursive https://github.com/PBearson/Provision-ECC608.git
-cd Provision-ECC608
-idf.py menuconfig
-```
+    ```
+    git clone --recurse-submodules https://github.com/PBearson/Provision-ECC608.git
+    cd Provision-ECC608
+    idf.py menuconfig
+    ```
 - The idf.py command is not needed if our IoT kit is used.
-- In the menu config, navigate to **Component config -> esp-cryptoauthlib** and change the I2C SDA pin and I2C SCL pin to the appropriate pinout for your setup. Not needed if our IoT kit is used.
-- If the I2C slave address is not 0xC0, or if you do not know the address, then check the option "Scan for the ATECC608A I2C address". Not needed if our IoT kit is used.
+- In the menu config, navigate to **Component config -> esp-cryptoauthlib** and change the I2C SDA pin and I2C SCL pin to the appropriate pinout for your setup. This is not needed if our IoT kit is used.
+- If the I2C slave address is not 0xC0, or if you do not know the address, then check the option "Scan for the ATECC608A I2C address". This is not needed if our IoT kit is used.
 - Now quit the menuconfig and build/flash the app to your ESP32. VS Code can be used to do the same thing, i.e. flashing the binary app/firmware into the ESP32, running it and monitoring the serial port output.
 ```
 idf.py build flash monitor
@@ -31,6 +31,6 @@ A public key and CSR will print to the console. Note: the private key is stored 
 
 ## Sample Output
 
-Note: You have to run the firmware/app to see the output. You MUST save the CSR (the part in the red rectangle in the image below) into a file, e.g. ecc608a.csr.
+Note: You have to run the firmware/app to see the output. You MUST save the CSR (the part in the red rectangle in the image below) into a file, e.g. ``` ecc608a.csr ```.
 
 ![Sample output](./imgs/provision-ecc608-sample.jpg)
