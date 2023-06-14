@@ -1,3 +1,0 @@
-[submodule "matt-change"]
-	path = components/esp-cryptoauthlib
-	url = https://github.com/DaintyJet/esp-cryptoauthlib.git
