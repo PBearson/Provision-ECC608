@@ -19,6 +19,7 @@ Follow these instructions to generate a private key and CSR:
     cd Provision-ECC608
     idf.py menuconfig
     ```
+    **Note**: By default, this project is already located in the ``` ~/esp/IoT-Examples/ ``` directory of the Ubuntu VM.
 - The idf.py command is not needed if our IoT kit is used.
 - In the menu config, navigate to **Component config -> esp-cryptoauthlib** and change the I2C SDA pin and I2C SCL pin to the appropriate pinout for your setup. This is not needed if our IoT kit is used.
 - If the I2C slave address is not 0xC0, or if you do not know the address, then check the option "Scan for the ATECC608A I2C address". This is not needed if our IoT kit is used.
