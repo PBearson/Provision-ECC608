@@ -1,0 +1,3 @@
+[submodule "v5c1"]
+	path = esp-cryptoauthlib
+	url = https://github.com/DaintyJet/esp-cryptoauthlib.git
