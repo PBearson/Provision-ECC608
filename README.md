@@ -2,7 +2,7 @@
 
 This example project is used to generate a private key and certificate sign request (CSR) using the [ATECC608A](https://www.microchip.com/wwwproducts/en/atecc608a) (TrustCustom) crypto chip. You will need to compile the example code, flash the generated firmware (binary) into the ESP32, which is connected to the ATECC608A chip through I2C, and run the firmware. The firmware will provision the ATECC608A chip, creating the public and privacy key pair. The private key will be stored inside of the ATECC608A and never go out of the ATECC608A. The firmware reads the public key and outputs it to the serial port. You HAVE to save the output CSR into a file.
 
-The project assumes you have connected your ESP32-WROOM-32 to an ECC608 through an I2C connection. The I2C address, SDA, and SCL pins are 0xC0, 27, and 33 respectively, but these are easily configurable. This is our IoT kit configuration. You do not need to change the I2C configuraiton if our IoT kit is used.
+The project assumes you have connected your ESP32-WROOM-32 to an ECC608 through an I2C connection. The I2C address, SDA, and SCL pins are 0xC0, 27, and 33 respectively, but these are easily configurable. This is our IoT kit configuration. You do not need to change the I2C configuration if our IoT kit is used.
 
 **Notes**:
 * ATECC608A is configured to be provisioned multiple times in this project.
@@ -35,3 +35,5 @@ A public key and CSR will print to the console. Note: the private key is stored 
 Note: You have to run the firmware/app to see the output. You MUST save the CSR (the part in the red rectangle in the image below) into a file, e.g. ``` ecc608a.csr ```.
 
 ![Sample output](./imgs/provision-ecc608-sample.jpg)
+
+**Note**: When using the [SaTC EDU PCB](https://github.com/xinwenfu/SaTC-PCB) the crypto coprocessor is an alternative, but compatible chip to the [ATECC608A](https://www.microchip.com/wwwproducts/en/atecc608a) (TrustCustom) crypto chip. Due to this *Cryptographic Operations* take additional time, and the locking operation may fail. This does not affect operations with the [AWS IoT-Core project](https://github.com/PBearson/esp-aws-iot/tree/master).
